@@ -12,11 +12,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import environ 
+# import environ 
 
 # Se crea el puente a las variables
-env = environ.Env()
-environ.Env.read_env()
+# env = environ.Env()
+# environ.Env.read_env()
 # -------------------------------------
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,11 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRETKEY')
-
+# SECRET_KEY = os.environ.get('SECRETKEY')
+SECRET_KEY = 's32typrfq&+tpmk*@9g*+ax-4t$#gqgte98!q6$itvtk1@a$!b'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
-
+# DEBUG = os.environ.get('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'core'
+    'core',
+    'blog',
 ]
 
 MIDDLEWARE = [
